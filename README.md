@@ -300,6 +300,8 @@ the permission to read builds. Please use your username and the generated token 
 
 
 #### GitLab (on-premise, beta)
+#### GitLab (on-premise, beta)
+#### GitLab (on-premise, beta)
 
 Supports an on-premise [GitLab](http://gitlab.com) Community Edition/Enterprise Edition with built-in CI server. Also supports [hosted gitlab](https://gitlab.com).
 
