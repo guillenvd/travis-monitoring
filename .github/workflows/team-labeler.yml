@@ -2,6 +2,8 @@ on: pull_request
 name: team-label
 jobs:
   git-sync:
+    runs-on: ubuntu-latest
+    steps:
     - name: "Check out my other private repo"
       uses: actions/checkout@master
       with:
