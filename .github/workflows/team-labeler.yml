@@ -1,6 +1,12 @@
 on: pull_request
 name: team-label
 jobs:
+  git-sync:
+    - name: Check out my other private repo
+      uses: actions/checkout@master
+      with:
+        repository: guillenvd/eng-team-self
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
   team-labeler:
     runs-on: ubuntu-latest
     steps:
