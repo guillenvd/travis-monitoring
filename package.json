@@ -1,5 +1,5 @@
 {
-  "name": "node-build-monitor",
+  "name": "node-build-monitor-test",
   "version": "0.9.54",
   "description": "A Build Monitor written in Node.js, which supports several build services and can be extended easily.",
   "author": "Marcell Spies <marcells@gmx.de>",
