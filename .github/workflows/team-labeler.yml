@@ -2,6 +2,10 @@ name: team-label
 on: [pull_request]
 jobs:
   build:
+    defaults:
+      run:
+        shell: bash
+        working-directory: scripts
     runs-on: ubuntu-latest
     steps:
     - name: Checkout to team repo
@@ -15,4 +19,5 @@ jobs:
         cd ../
         ls
         echo "position $(pwd)"
+        echo " default ${{ env.working-directory }}"
         echo "🍏 This job's status is ${{ job.status }}."
