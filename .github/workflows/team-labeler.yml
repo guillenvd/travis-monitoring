@@ -4,10 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Clonning repo eng-team-self
-      - uses: actions/checkout@main
-        with:
-          repository: guillenvd/eng-team-self
-          path: ./eng-team-self
+    - uses: actions/checkout@main
+      with:
+        repository: guillenvd/eng-team-self
+        path: ./eng-team-self
     - name: Show Working directory
       run: ls
