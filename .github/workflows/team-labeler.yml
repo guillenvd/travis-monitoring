@@ -4,7 +4,6 @@ jobs:
   build:
     defaults:
       run:
-        shell: bash
         working-directory: scripts
     runs-on: ubuntu-latest
     steps:
