@@ -16,7 +16,6 @@ jobs:
         path: ./eng-team-self
     - name: Show Working directory
       run: |
-        cd ../
         ls
         echo "position $(pwd)"
         echo " default ${{ env.working-directory }}"
