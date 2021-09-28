@@ -13,6 +13,7 @@ jobs:
     - name: Show Working directory
       run: |
         cd ./eng-team-self
+        ls
         cd ${{ github.workspace }}
         echo "position $(pwd)"
         ls
