@@ -4,8 +4,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: scripts
-    runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
     steps:
     - name: Checkout to team repo
       uses: actions/checkout@main
@@ -19,3 +18,7 @@ jobs:
         echo "position $(pwd)"
         echo " default ${{ env.working-directory }}"
         echo "🍏 This job's status is ${{ job.status }}."
+        runs-on: ubuntu-latest
+    - uses: JulienKode/team-labeler-action@v0.1.0
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
