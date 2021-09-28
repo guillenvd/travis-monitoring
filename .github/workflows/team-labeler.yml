@@ -2,9 +2,7 @@ name: team-label
 on: [pull_request]
 jobs:
   build:
-    defaults:
-      run:
-        runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout to team repo
       uses: actions/checkout@main
