@@ -13,6 +13,7 @@ jobs:
     - name: Show Working directory
       run: |
         cd ./eng-team-self
-        ls -la
         cd ${{ github.workspace }}
-        echo "$(pwd)"
+        echo "position $(pwd)"
+        ls
+        echo "🍏 This job's status is ${{ job.status }}."
