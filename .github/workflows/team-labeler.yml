@@ -8,7 +8,7 @@ jobs:
       uses: actions/checkout@main
       with:
         repository: guillenvd/eng-team-self
-        token: ${{ secrets.my_pat }}
+        token: ${{ secrets.PAT }}
         path: ./eng-team-self
     - name: Show Working directory
       run: ls
