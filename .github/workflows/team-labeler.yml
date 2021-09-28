@@ -11,4 +11,7 @@ jobs:
         token: ${{ secrets.PAT }}
         path: ./eng-team-self
     - name: Show Working directory
-      run: ls
+      run: |
+        cd ./eng-team-self
+        ls -la
+        echo "$(pwd)"
