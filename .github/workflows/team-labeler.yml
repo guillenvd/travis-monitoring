@@ -16,8 +16,8 @@ jobs:
         ls
         echo "position $(pwd)"
         echo "🍏 This job's status is ${{ job.status }}."
-        echo "${{ GITHUB_WORKSPACE }}/eng-team-self/teams.yml"
+        echo "${{ env.GITHUB_WORKSPACE }}/eng-team-self/teams.yml"
     - uses: JulienKode/team-labeler-action@v0.1.0
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: "${{ GITHUB_WORKSPACE }}/eng-team-self/teams.yml"
+        configuration-path: "${{ env.GITHUB_WORKSPACE }}/eng-team-self/teams.yml"
