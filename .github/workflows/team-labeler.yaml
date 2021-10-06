@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: drata/team-labeler-action@v1.0.5
       with:
-        repo-token: "${{ secrets.SECRET_PAT }}"
+        repo-token: "${{ secrets.PAT }}"
         configuration-path: teams.yml
         source: 'remote'
         repo: 'eng-teams'
