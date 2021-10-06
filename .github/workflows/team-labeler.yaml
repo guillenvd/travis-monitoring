@@ -1,0 +1,15 @@
+on: pull_request
+name: team-label
+jobs:
+  team-labeler:
+    name: Team Labeler
+    runs-on: ubuntu-latest
+    steps:
+    - uses: drata/team-labeler-action@v1.0.5
+      with:
+        repo-token: "${{ secrets.SECRET_PAT }}"
+        configuration-path: teams.yml
+        source: 'remote'
+        repo: 'eng-teams'
+        owner: 'drata'
+        ref: 'guillenvd/add-teams'
