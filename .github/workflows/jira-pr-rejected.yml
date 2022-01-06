@@ -28,3 +28,9 @@ jobs:
       with:
         issue: ${{ steps.create.outputs.issue }}
         transition: "CR Rejected"
+
+    - name: Comment on issue
+      uses: atlassian/gajira-comment@master
+      with:
+      issue: ${{ steps.create.outputs.issue }}
+      comment: requested changes : ${{ github.event.repository.full_name }}
