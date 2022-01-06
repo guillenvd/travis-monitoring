@@ -1,8 +1,6 @@
+name: Manually triggered workflow
 on:
-  pull_request:
-    types: [request_changes, assigned, reopened]
-
-name: Transition Ticket CR Rejected
+  workflow_dispatch
 jobs:
   transition-issue-cr-rejected:
     name: Transition Ticket CR Rejected
