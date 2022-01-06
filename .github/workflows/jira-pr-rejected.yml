@@ -1,6 +1,7 @@
-name: Manually triggered workflow
+name: Transition Ticket CR Rejected
 on:
-  workflow_dispatch
+  pull_request:
+   types: [changes_requested]
 jobs:
   transition-issue-cr-rejected:
     name: Transition Ticket CR Rejected
@@ -35,4 +36,4 @@ jobs:
       uses: atlassian/gajira-comment@master
       with:
         issue: ${{ steps.jira.outputs.issue }}
-        comment: repository ${{ github.event.repository.full_name }}
+        comment: Changes requested - ${{ github.event.repository.full_name }}
