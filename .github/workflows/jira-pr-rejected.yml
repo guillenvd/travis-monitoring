@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [request_changes]
+    types: [REQUEST_CHANGES, assigned]
 
 name: Transition Ticket CR Rejected
 jobs:
