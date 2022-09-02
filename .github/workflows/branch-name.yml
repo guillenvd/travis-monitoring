@@ -1,5 +1,7 @@
 name: Branch Name
-on: push
+on:
+  pull_request:
+    types: [opened]
 jobs:
   branch_name:
     runs-on: ubuntu-latest
@@ -12,4 +14,4 @@ jobs:
           fail_if_invalid_branch_name: 'true'
           ignore_branch_pattern: 'master|beta'
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}g
+      GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
