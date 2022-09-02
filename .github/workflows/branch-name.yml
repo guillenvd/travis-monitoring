@@ -1,0 +1,16 @@
+name: Branch Name
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  branch_name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: AlbertHernandez/branch-name-action@master
+        with:
+          branch_pattern: '(release|feature|[A-Z]{2,}-\d+)+(\/)([A-z]|[,-]|[0-9])+'
+          comment_for_invalid_branch_name: 'Ups! This branch name is not following the standards! You can see them here: <>'
+          fail_if_invalid_branch_name: 'true'
+          ignore_branch_pattern: 'main'
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
