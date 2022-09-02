@@ -1,5 +1,7 @@
 name: Branch Name
-on: push
+on:
+  pull_request:
+    types: [opened]
 jobs:
   branch_name:
     runs-on: ubuntu-latest
